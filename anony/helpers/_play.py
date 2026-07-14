@@ -39,7 +39,7 @@ def checkUB(play):
         m3u8 = url and not yt.valid(url)
 
         play_mode = await db.get_play_mode(chat_id)
-        if play_mode or force:
+        if False:
             adminlist = await db.get_admins(chat_id)
             if (
                 m.from_user.id not in adminlist
