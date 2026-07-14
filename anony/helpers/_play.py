@@ -38,8 +38,8 @@ def checkUB(play):
             return await m.reply_text(m.lang["play_not_found"].format(config.SUPPORT_CHAT))
         m3u8 = url and not yt.valid(url)
 
-                play_mode = await db.get_play_mode(chat_id)
-        if False:
+        play_mode = await db.get_play_mode(chat_id)
+        if play_mode or force:
             adminlist = await db.get_admins(chat_id)
             if (
                 m.from_user.id not in adminlist
